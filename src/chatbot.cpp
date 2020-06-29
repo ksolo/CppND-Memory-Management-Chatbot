@@ -48,17 +48,17 @@ ChatBot::~ChatBot()
 ChatBot::ChatBot(const ChatBot &chatbot)
 {
     std::cout << "ChatBot Copy Constructor" << std::endl;
-    *_chatLogic = *chatbot._chatLogic;
-    *_rootNode = *chatbot._rootNode;
-    *_image = *chatbot._image;
+    _chatLogic = chatbot._chatLogic;
+    _rootNode = chatbot._rootNode;
+    _image = chatbot._image;
 }
 
 ChatBot &ChatBot::operator=(const ChatBot &chatbot)
 {
     std::cout << "ChatBot Copy Assignment" << std::endl;
-    *_chatLogic = *chatbot._chatLogic;
-    *_rootNode = *chatbot._rootNode;
-    *_image = *chatbot._image;
+    _chatLogic = chatbot._chatLogic;
+    _rootNode = chatbot._rootNode;
+    _image = chatbot._image;
     return *this;
 }
 
